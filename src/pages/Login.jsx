@@ -10,7 +10,7 @@ const Login = () => {
             Hanako Store
           </h1>
         </div>
-        <div className='my-2'>
+        <div className='my-2 flex flex-col justify-center items-center'>
           <h3 className='font-syne font-[600] text-[22px] uppercase'>
             SIGN IN
           </h3>
