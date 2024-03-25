@@ -3,33 +3,62 @@ import React from 'react'
 const Login = () => {
   return (
     <div className='loginDiv'>
-      <div>
-        <div>
-          <span></span>
-          <h1>Hanako Store</h1>
+      <div className='h-[500px] w-11/12 sm:w-[475px] bg-main rounded-[20px] text-yellowish p-5 flex justify-between flex-col'>
+        <div className='flex justify-center items-center mt2'>
+          <span className='w-[6px] bg-labelColor h-[39px] mr-5'></span>
+          <h1 className='text-[22px] sm:text-[32px] font-syne font-[700] uppercase'>
+            Hanako Store
+          </h1>
         </div>
-        <div>
-          <h3>SIGN IN</h3>
-          <p>Enter your credentials to access your account</p>
+        <div className='my-2'>
+          <h3 className='font-syne font-[600] text-[22px] uppercase'>
+            SIGN IN
+          </h3>
+          <p className='font-syne font-[600] text-[17px] text-labelColor text-label mt-1'>
+            Enter your credentials to access your account
+          </p>
         </div>
-        <form>
-          <div className="">
-            <label htmlFor="email">Email</label>
-            <input type="email" placeholder="Enter your email" required />
+        <form className="flex flex-col text-left p-3 gap-5">
+          <div className='flex flex-col gap-2'>
+            <label className="font-syne text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-white hover:after:pl-3 hover:after:underline" 
+            htmlFor="email">
+              Email
+            </label>
+            <input 
+              className='login-input text-main'
+              type="email" 
+              placeholder="Enter your email" 
+              required 
+            />
           </div>
-          <div>
-            <label htmlFor="pass">Password</label>
+          <div className='flex flex-col gap-2'>
+            <label 
+                className="font-syne text-label text-labelColor hover:cursor-pointer hover:after:content-['admin'] hover:after:text-white hover:after:pl-3 hover:after:underline"
+                htmlFor="pass"
+            >
+              Password
+            </label>
             <input
+              className='login-input text-main'
               type="password"
               name="pass"
               placeholder="Enter your password"
               required
             />
           </div>
-          <button>Sign In</button>
-          <p>
-            <span> Forgot your password? </span>
-            <span>Reset Password</span>
+          <button 
+            type='submit'
+            className='bg-labelColor h-[44px] text-main font-syne uppercase hover:opacity-90 rounded-[4px]'
+          >
+            Sign In
+          </button>
+          <p className='flex justify-center items-center flex-wrap'>
+            <span className='text-label font-syne font-[400] text-labelColor'> 
+              Forgot your password?
+            </span>
+            <span className='text-labelColor text-[14px] font-syne font-[500] underline ml-1'>
+              Reset Password
+            </span>
           </p>
         </form>
       </div>

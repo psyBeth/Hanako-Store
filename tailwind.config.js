@@ -8,11 +8,15 @@ module.exports = {
       colors: {
         main: "#6a0d83",
         navbarColor: "#ce4993",
+        reddish: "#ee5d6c",
         labelColor: "#fb9062",
+        yellowish: "#eeaf61",
         white: "#fff"
+
       },
       fontFamily: {
         'syne' : ['"Syne"', 'sans-serif'],
+        // montserrat: ["Montserrat", "sans-serif"],
       },
       fontSize: {
         label: [ '14px', {
