@@ -4,12 +4,12 @@ import { AuthContext } from "../context/AuthProvider";
 const Login = () => {
   const [email,setEmail] = useState("");
   const [pass,setPass] = useState("");
-  const { login } = useContext(AuthContext)
+  const { login } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email, pass);
-    if(email.toLowerCase ==="admin@aa.com" 
-    && pass.toLowerCase ==="admin") {
+    console.log({email, pass});
+    if(email.toLowerCase() ==="admin@aa.com" 
+    && pass.toLowerCase() ==="admin") {
       login({email, pass})
     } else {
       alert("Wrong email or password.")
