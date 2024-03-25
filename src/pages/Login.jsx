@@ -1,6 +1,12 @@
-import React from 'react'
+import { useState } from "react";
 
 const Login = () => {
+  const [email,setEmail] = useState("");
+  const [pass,setPass] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(email, pass);
+  };
   return (
     <div className='loginDiv'>
       <div className='h-[500px] w-11/12 sm:w-[475px] bg-main rounded-[20px] text-yellowish p-5 flex justify-between flex-col'>
@@ -18,7 +24,7 @@ const Login = () => {
             Enter your credentials to access your account
           </p>
         </div>
-        <form className="flex flex-col text-left p-3 gap-5">
+        <form onSubmit={handleSubmit} className="flex flex-col text-left p-3 gap-5">
           <div className='flex flex-col gap-2'>
             <label className="font-syne text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-white hover:after:pl-3 hover:after:underline" 
             htmlFor="email">
@@ -28,7 +34,10 @@ const Login = () => {
               className='login-input text-main'
               type="email" 
               placeholder="Enter your email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required 
+              // autoFocus
             />
           </div>
           <div className='flex flex-col gap-2'>
@@ -43,6 +52,8 @@ const Login = () => {
               type="password"
               name="pass"
               placeholder="Enter your password"
+              value={pass}
+              onChange={(e)=>setPass(e.target.value)}
               required
             />
           </div>
