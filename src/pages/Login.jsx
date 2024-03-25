@@ -9,7 +9,7 @@ const Login = () => {
     e.preventDefault()
     console.log(email, pass);
     if(email.toLowerCase ==="admin@aa.com" 
-    && pass.toLowerCase ==="aadmin") {
+    && pass.toLowerCase ==="admin") {
       login({email, pass})
     } else {
       alert("Wrong email or password.")
