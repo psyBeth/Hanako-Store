@@ -23,6 +23,7 @@ const Navbar = () => {
   const { logout } = useContext(AuthContext);
   const location = useLocation();
   //! The useLocation hook returns the current location as an object. This object contains the location path from the router, location parameters, and location status.
+  // can be seen on console
   console.log(location);
 
   return (
