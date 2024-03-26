@@ -1,7 +1,24 @@
 import SearchInput from "../components/SearchInput";
 import ProductCard from "../components/ProductCard";
+import { useState } from "react";
+import axios from "axios";
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+
+  const getData = async () => {
+    setLoading(true);
+    try {
+      const { data } = await axios(`https://dummyjson.com/products/search?q=${search}`);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
   
 
   return (
