@@ -13,6 +13,10 @@ const AuthProvider = ({children}) => {
     const login = (info) => {
         setUser(info)
         navigate("/dashboard")
+    };
+
+    const logout = () => {
+        setUser(null);
     }
 
     return (
