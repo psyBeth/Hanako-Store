@@ -1,6 +1,6 @@
 import SearchInput from "../components/SearchInput";
 import ProductCard from "../components/ProductCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Products = () => {
@@ -19,7 +19,10 @@ const Products = () => {
       setLoading(false);
     }
   };
-  
+
+  useEffect( () => {
+    getData()
+  }, []);
 
   return (
     <div className="mx-auto max-w-2x1 px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7x1 lg:px-8">
