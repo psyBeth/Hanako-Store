@@ -23,7 +23,7 @@ const Products = () => {
 
   useEffect( () => {
     getData()
-  }, []);
+  }, [search]);  //! getData() whenever the search state changes
 
   return (
     <div className="mx-auto max-w-2x1 px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7x1 lg:px-8">
