@@ -11,7 +11,8 @@ module.exports = {
         reddish: "#ee5d6c",
         labelColor: "#fb9062",
         yellowish: "#eeaf61",
-        white: "#fff"
+        white: "#fff",
+        blueish: "#dcf3ff",
 
       },
       fontFamily: {
