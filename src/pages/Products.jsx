@@ -12,7 +12,8 @@ const Products = () => {
     setLoading(true);
     try {
       const { data } = await axios(`https://dummyjson.com/products/search?q=${search}`);
-      console.log(data);
+      // console.log(data);
+      setProducts(data.products);
     } catch (error) {
       console.log(error);
     } finally {
@@ -26,7 +27,7 @@ const Products = () => {
 
   return (
     <div className="mx-auto max-w-2x1 px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7x1 lg:px-8">
-      <SearchInput />
+      <SearchInput search={search} setSearch={setSearch} />
       <h2 className="text-2xl font-bold mt-8 tracking-tight text-gray-900">
         All Products
       </h2>
