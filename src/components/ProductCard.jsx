@@ -1,9 +1,9 @@
 import {useNavigate} from "react-router-dom"
 
-
 const ProductCard = ({item}) => {
-  const {title,category,thumbnail,price} = item;
+  const {title, category, thumbnail, price} = item;
   const navigate = useNavigate()
+
   return (
     <div className="cursor-pointer" onClick={()=>navigate(`/dashboard/products/${title}?detail=${item.id}`,{state:item}) }>
       <div className="w-full rounded-md bg-gray-200 hover:opacity-75 lg:h-80">
