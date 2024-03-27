@@ -1,21 +1,23 @@
-import axios from "axios";
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 import ErrorPage from "../components/ErrorPage";
 
 const ProductDetail = () => {
-  //! IM NOT SURE WHAT I DID BUT IT WORKS 
-  //! I WILL BE BACK WITH EXPLANATION COMMENTS
 
   const { title: params } = useParams();
+  //captures the value in dynamic routes
+  //e capture whatever name we gave when setting the route with useParams.
 
   const { state, search } = useLocation();
+  //! access the data moved via navigate with the useLocation() hook
+  //! capture the parameters in the URL with search.
 
   const navigate = useNavigate();
   console.log(search);
   console.log(state);
   // const getDetailData = async () => {
   //   const {data} = await axios(`https://dummyjson.com/products/${search.split("=")[1]}`)
+  //! Since we know that the value in the search coming from the url is unique, we captured the id information in this way. If there is more than one parameter in the url, then we need to sort accordingly.
   //   console.log(data)
   // }
   // useEffect(()=>{
