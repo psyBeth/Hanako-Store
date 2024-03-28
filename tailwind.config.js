@@ -33,3 +33,6 @@ module.exports = {
   plugins: [],
 };
 
+//TODO: COLOURS WILL BE UPDATED
+//TODO: IMAGE CLASSES WILL BE EDITED
+
