@@ -4,7 +4,10 @@ import { useContext, useEffect, useState } from "react";
 
 
 const ProductContext = createContext();
+//? The reason we need context is that we do not want both the query written by the user and the results from the API to be lost when we come back after going to the detail page.
+//! Also, if we did it on the products page, it would send a request to the API every time the page was rendered, even though there was no call.
 
+//! create wrapper component; Stored data and functions are defined and shared here
 const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -26,15 +29,17 @@ const ProductProvider = ({ children }) => {
   useEffect(() => {
     getData()
   }, [search]);
+
   return (
     <ProductContext.Provider value={{ products, loading, search, setSearch }}>
-      product provider
+      { children }
     </ProductContext.Provider>
   )
 }
 
 export default ProductProvider;
 
+// optional
 export const useProducts = () => {
   return useContext(ProductContext)
 };
