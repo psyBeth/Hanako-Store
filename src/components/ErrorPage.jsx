@@ -6,7 +6,8 @@ const ErrorPage = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCount((prev) => (prev === 0 ? prev : prev - 1)); // prev sayesinde statein hep en gücenl değerini yakalayabiliyoruz.
+            setCount((prev) => (prev === 0 ? prev : prev - 1)); 
+            // prev makes us catch the updated value
         }, 1000);
         return () => clearInterval(timer);
     }, []);
