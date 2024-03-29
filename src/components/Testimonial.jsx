@@ -5,7 +5,8 @@ const Testimonial = () => {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   return (
-    <section className="py-20 bg-main">
+    <div className="bg-main">
+    <section className="py-20 my-0 bg-main">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-blueish underline font-semibold pb-6">
@@ -44,7 +45,7 @@ const Testimonial = () => {
             )}
           </ul>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 pb-25 bg-main">
           <ul className="flex gap-x-3 justify-center">
             {testimonials.map((item, idx) => (
               <li key={idx}>
@@ -59,6 +60,7 @@ const Testimonial = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

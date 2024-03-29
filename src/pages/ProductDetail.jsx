@@ -69,15 +69,15 @@ const ProductDetail = () => {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => navigate(-1)}
-                className="border rounded-lg bg-labelColor text-white p-2"
+                className="border rounded-lg bg-labelColor text-white p-3"
               >
-                Geri
+                Back 
               </button>
               <button
                 onClick={() => navigate("/dashboard")}
-                className="border rounded-lg bg-main text-white p-2"
+                className="border rounded-lg bg-main text-white p-3"
               >
-                Ana Sayfaya Dön
+                Back to Homepage
               </button>
             </div>
           </div>
