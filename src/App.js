@@ -13,3 +13,5 @@ function App() {
 }
 
 export default App;
+
+//TODO: FOOTER WILL BE ADDED TO HOME AND ABOUT PAGE 
