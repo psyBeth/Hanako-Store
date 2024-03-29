@@ -29,13 +29,13 @@ const ProductDetail = () => {
   const { thumbnail, title, description, category, price, images } = state;
 
   return (
-    <div className="container">
-      <div className="mt-6 w-full ">
+    <div className="container bg-main">
+      <div className="mt-6 w-full bg-white rounded-xl">
         <article className="mx-auto w-full block lg:flex mt-4 h-full 2xl:h-[70vh]  shadow-lg border rounded-md duration-300 hover:shadow-sm">
           <div class="grid grid-rows-4 gap-2 h-full w-full lg:w-7/12 p-4">
-            <div className="w-full row-span-3">
+            <div className="w-full row-span-3 ">
               <img
-                className="h-full w-full rounded-lg"
+                className="h-full w-full rounded-lg object-contain"
                 src={thumbnail}
                 alt=""
               />
@@ -55,15 +55,15 @@ const ProductDetail = () => {
           </div>
           <div className="w-full lg:w-5/12 flex flex-col justify-evenly p-4">
             <div className="pt-3 ml-4 mr-2 mb-3">
-              <h3 className="text-xl text-gray-900">{title}</h3>
-              <p className="text-gray-400 mt-1">{description}</p>
+              <h3 className="text-5xl font-[600] text-main underline pb-10">{title}</h3>
+              <p className="text-main font-[500] text-xl mt-1">{description}</p>
             </div>
-            <div className="flex  mt-2 pt-3 ml-4 mr-2">
+            <div className="flex  mt-2 pt-3 ml-4 mr-2 text-main text-l">
               <div className="">
-                <span className="block text-gray-900">
+                <span className="block ">
                   Category : {category}
                 </span>
-                <span className="block  text-sm">Price : {price} $</span>
+                <span className="block">Price : {price} $</span>
               </div>
             </div>
             <div className="flex justify-end gap-3 mt-4">

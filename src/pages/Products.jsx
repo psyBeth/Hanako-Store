@@ -30,11 +30,11 @@ const Products = () => {
   const { products, loading } = useProducts();
 
   return (
-    <div className="container">
+    <div className="container bg-main">
       {/* <SearchInput search={search} setSearch={setSearch} /> */}
       <SearchInput />
 
-      <h2 className="text-2xl font-bold mt-8 tracking-tight text-gray-900">
+      <h2 className="text-4xl font-bold mt-8 tracking-tight text-labelColor underline">
         All Products
       </h2>
       {loading ? (
