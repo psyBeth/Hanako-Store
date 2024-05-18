@@ -2,13 +2,13 @@
 
 In this application, you can access products only after logging in. Once logged in, you can navigate between pages, view product details, and perform searches related to products. To implement this scenario, I utilized API requests, the React-Router-Dom, and Context API in this application.
 
-## Screenshots
+## Screen recording:
 
 ![Project snapshot](./hanako-store.gif)
 
 [Hanako Store Live Page](https://hanako-store-1041.netlify.app)
 
-## Tech/framework used
+## Tools used
 
 <b>Built with</b> <br>
 - React: JavaScript library for building user interfaces.
