@@ -1,4 +1,4 @@
-# Things Shop
+# Hanako Store
 
 In this application, you can access products only after logging in. Once logged in, you can navigate between pages, view product details, and perform searches related to products. To implement this scenario, I utilized API requests, the React-Router-Dom, and Context API in this application.
 
